@@ -13,8 +13,6 @@ module.exports = (app) =>{
         target:"http://localhost:3535",
         changeOrigin:true,
     }))
-<<<<<<< HEAD
-=======
     app.use(proxy("/theatre", {
         target: "https://api.juooo.com",
         changeOrigin: true,
@@ -27,5 +25,4 @@ module.exports = (app) =>{
         target: "https://api.juooo.com",
         changeOrigin: true,
     }))
->>>>>>> zhangqi
 }

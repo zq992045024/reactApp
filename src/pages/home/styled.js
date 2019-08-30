@@ -35,9 +35,34 @@ export const HomeWrapper = styled.div`
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        color: palevioletred;
+        color: black;
             i{
                 font-size:0.65rem;
+            }
+        }
+        a:nth-of-type(1){
+            i{
+                color:red
+            }
+        }
+        a:nth-of-type(2){
+            i{
+                color:orange
+            }
+        }
+        a:nth-of-type(3){
+            i{
+                color:purple
+            }
+        }
+        a:nth-of-type(4){
+            i{
+                color:skyblue
+            }
+        }
+        a:nth-of-type(5){
+            i{
+                color:olivedrab
             }
         }
     }

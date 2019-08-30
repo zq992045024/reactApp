@@ -1,7 +1,6 @@
 import {
     Home,
     Mine,
-    Cinema,
     Like,
     Login,
     Search,
@@ -11,12 +10,8 @@ import {
     Fun,
     Huj,
     Music,
-<<<<<<< HEAD
-    Detial
-=======
     Detial,
     Theater
->>>>>>> zhangqi
 } from "@pages"
 
 export const tabBarRoute = [
@@ -33,13 +28,8 @@ export const tabBarRoute = [
     },
 
     {
-<<<<<<< HEAD
-        path:"/cinema",
-        component:Cinema,
-=======
         path:"/theater",
         component:Theater,
->>>>>>> zhangqi
         meta:{
             flag:true,
             auth:false
@@ -51,7 +41,8 @@ export const tabBarRoute = [
         path:"/like",
         component:Like,
         meta:{
-            flag:true
+            flag:true,
+            auth:true
         },
         name:"票夹",
         icon:"\ue50b"

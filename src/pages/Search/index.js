@@ -1,15 +1,4 @@
 import React, { Component } from 'react'
-<<<<<<< HEAD
-
-export default class Mine extends Component {
-    render() {
-        return (
-            <div>
-                search
-            </div>
-        )
-    }
-=======
 import { Searche } from "./styled"
 import { Link } from "react-router-dom"
 import { hot_set, hot_seach} from "@api/play"
@@ -109,5 +98,4 @@ export default class Search extends Component {
         })
 
     }
->>>>>>> zhangqi
 }

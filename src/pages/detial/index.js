@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { DetialWrapper } from "./styled"
 import BuyTic from "@common/buyTickey"
+import HeadBar from "@common/headBar/header.js"
 import { connect } from "react-redux";
 import { mapStateProps,mapDispatchProps } from "./mapState";
 class Detial extends Component {
@@ -9,10 +10,11 @@ class Detial extends Component {
         let img = "https://img.piaoniu.com/poster/"+detialInfo.img
         detialInfo.poster = img;
         let {likeNameList} = this.props.users
+        console.log(likeNameList,detialInfo.name)
         return (
             <DetialWrapper>
                 <div className="back">
-                    演出详情
+                    <HeadBar title="演出详情"/>
                 </div>
                 <div className="detial_main">
                     <div className="header">

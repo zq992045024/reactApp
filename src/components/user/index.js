@@ -2,27 +2,29 @@ import React, { Component } from 'react'
 import { UserMine } from "./styled"
 import bg from "./bg.png"
 import vip from "./ad.411f5e6.png"
+import {Link} from "react-router-dom"
+import {connect} from "react-redux"
 var sectionStyle = {
     width: "100%",
     height: "4rem",
     // makesure here is String确保这里是一个字符串，以下是es6写法
     backgroundImage: `url(${bg})`
 };
-
-export default class Usermine extends Component {
+class Usermine extends Component {
     render() {
+        
         return (
             <UserMine>
                 <div className="mine-info" style={sectionStyle}>
                     <a href="/mine" className="set">
-                        <i className="iconfont">&#xe630;</i>
+                        <i className="iconfont">&#xe507;</i>
                     </a>
                     <div className="mine-info__main">
                         <div className="mine-head">
                             <div className="mine-pic">
                                 <img alt="" src="https://image.juooo.com/group1/M00/03/6F/rAoKNV0XF2uABEtSAAANUrP00o0602.png" />
                             </div>
-                            <span className="mine-name">橙子</span>
+                            <span className="mine-name">{this.props.users.username}</span>
                             <span className="mine-uid">ID: 6821281</span>
                         </div>
                         <div className="mine-label">
@@ -54,19 +56,19 @@ export default class Usermine extends Component {
                         <ul className="mine-setting__list">
                             <li className="mine-setting__list__item">
                                 <a href="http://localhost:3000/mine#/mine" className="mine-order">
-                                    <i className="iconfont">&#xe646;</i> 
+                                    <i className="iconfont">&#xe512;</i> 
                                     <p className="mine-">我的订单</p>
                                 </a>
                             </li>
                             <li className="mine-setting__list__item">
                                 <a href="http://localhost:3000/mine#/mine" className="mine-ticket">
-                                    <i className="iconfont">&#xe60a;</i> 
+                                    <i className="iconfont">&#xe618;</i> 
                                     <p className="mine-">我的票夹</p>
                                 </a>
                             </li>
                             <li className="mine-setting__list__item">
                                 <a href="http://localhost:3000/mine#/mine" className="mine-bag">
-                                    <i className="iconfont">&#xe60a;</i> 
+                                    <i className="iconfont">&#xe60e;</i> 
                                     <p className="mine-">我的卡包</p>
                                 </a>
                             </li>
@@ -75,13 +77,13 @@ export default class Usermine extends Component {
                         <ul className="mine-setting__list">
                             <li className="mine-setting__list__item">
                                 <a href="http://localhost:3000/mine#/mine" className="mine-perpor">
-                                    <i className="iconfont">&#xe605;</i>
+                                    <i className="iconfont">&#xe60d;</i>
                                     <p className="mine-">实名购票人</p>
                                 </a>
                             </li>
                             <li className="mine-setting__list__item">
                                 <a href="http://localhost:3000/mine#/mine" className="mine-address">
-                                    <i className="iconfont">&#xe60e;</i> 
+                                    <i className="iconfont">&#xe63e;</i> 
                                     <p className="mine-">收货地址</p>
                                 </a>
                             </li>
@@ -93,14 +95,21 @@ export default class Usermine extends Component {
                             </li> 
                             <li className="mine-setting__list__item">
                                 <a href="http://localhost:3000/mine#/mine" className="mine-help">
-                                    <i className="iconfont">&#xe66b;</i> 
+                                    <i className="iconfont">&#xe608;</i> 
                                     <p className="mine-active">客服帮助</p>
                                 </a>
                             </li>
                         </ul>
+                    </div>
+                    <div className="user_out">
+                        <Link to="/login">退出</Link>
                     </div>
                 </div>
             </UserMine>
         )
     }
 }
+const mapStateProps = (state)=>({
+    users:state.users
+})
+export default connect(mapStateProps)(Usermine)

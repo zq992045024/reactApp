@@ -30,8 +30,6 @@ export const users_login_api = (username,password)=>https("post","/piaoniu/login
 //买票
 
 export const buy_tick_api = (eventId)=>http("get","/api/v3/ticketCategories/?supportSpeedPackBuy=true&b2c=true",{eventId})
-<<<<<<< HEAD
-=======
 
 
 //剧院
@@ -54,4 +52,3 @@ export const hot_set = () => http.get("/api/v1/activities/hottest", {})
 
 //热搜
 export const hot_seach = (input,size=10) => http.get("/api/v2/activities/suggest", {input,size})
->>>>>>> zhangqi

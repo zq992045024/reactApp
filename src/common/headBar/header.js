@@ -1,21 +1,21 @@
 import React, { Component } from 'react'
 // import Wrapper from "./headHoc"
-import {Header} from "./styled"
-export default class header extends Component {
-    
+import { Header } from "./styled"
+import { withRouter } from "react-router-dom"
+ class header extends Component {
+
     render() {
-        console.log(this.props)
         return (
             <Header>
-                <div className="iconfont" onClick={this.handleBack.bind(this)}>&#xe6a2;</div>
+                <div className="iconfont" onClick={this.handleBack.bind(this)}>&#xe699;</div>
                 <h2>{this.props.title}</h2>
             </Header>
-            
+
         )
     }
-    handleBack(){
-        // this.props.history.to({ pathname: '/home' });
+    handleBack() {
+        this.props.history.goBack()
     }
 }
-// this.props.history.push({ pathname: '/home', state: { datagroupsperson } });
- //Wrapper(header)('title')
+
+export default withRouter(header)

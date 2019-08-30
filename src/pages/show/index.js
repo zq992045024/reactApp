@@ -110,7 +110,6 @@ export default class Mine extends Component {
         if(!info.rank){
             info.rank='暂无评分'
         }
-        console.log(info.events[0].id)
         this.props.history.push({pathname:"/detial"+'/'+info.events[0].id+'/'+info.name+'/'+info.timeRange+'/'+info.venueName+'/'+info.rank+'/'+info.lowPrice+"/"+info.poster.substr(31)})
     }
 }

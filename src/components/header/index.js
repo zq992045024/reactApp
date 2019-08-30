@@ -13,7 +13,7 @@ export default class Header extends Component {
                 </div>
                 <div id="search">
                     <NavLink to="/search">
-                        <i className="iconfont">&#xe601;</i>
+                        <i className="iconfont">&#xe50b;</i>
                         <span>搜索明星、演出、场馆</span>
                     </NavLink>
                 </div>

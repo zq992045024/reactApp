@@ -7,10 +7,6 @@ const Home = Loadable({
     loading:Loading
 })
 
-const Cinema = Loadable({
-    loader:()=>import("./cinema"),
-    loading:Loading
-})
 
 const Like = Loadable({
     loader:()=>import("./like"),
@@ -70,16 +66,11 @@ const Detial = Loadable({
     loading:Loading
 })
 
-<<<<<<< HEAD
-export {
-    Home,Cinema,Like,Mine,Login,Search,City,Huj,Music,Pe,Fun,Show,Detial
-=======
 const Theater = Loadable({
     loader:()=>import("./theater"),
     loading:Loading
 })
 
 export {
-    Home,Cinema,Like,Mine,Login,Search,City,Huj,Music,Pe,Fun,Show,Detial,Theater
->>>>>>> zhangqi
+    Home,Like,Mine,Login,Search,City,Huj,Music,Pe,Fun,Show,Detial,Theater
 }

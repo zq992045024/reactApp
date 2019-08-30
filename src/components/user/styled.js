@@ -135,5 +135,20 @@ export const UserMine = styled.div`
                 }
             }
         }
+        .user_out{
+            width:100%;
+            height:1rem;
+            margin-top:1.5rem;
+            a{
+                display:block;
+                margin: 0 auto;
+                width:100%;
+                height:1rem;
+                text-align:center;
+                background:#ccc;
+                line-height:1rem;
+                border-radius:2rem;
+            }
+        }
     }
 `

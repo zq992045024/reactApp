@@ -5,8 +5,8 @@ const defaultState = {
     password: "",
     isLogin: false,
     isGotoHome: false,
-    likeList: [],
-    likeNameList:[]
+    likeList: JSON.parse(sessionStorage.getItem('likeList'))||[],
+    likeNameList:JSON.parse(sessionStorage.getItem('likeNameList'))||[]
 }
 
 
@@ -39,7 +39,6 @@ export default handleActions({
                 alert(action.payload.info);
             }
         }
-        console.log(userObj)
         return userObj
     },
     CHANGE_HOME: (state) => {
@@ -53,15 +52,20 @@ export default handleActions({
         let obj = action.payload
         let name = action.payload.name;
         let names = userObj.likeNameList
-        console.log(name)
         if (names.includes(name)){
             let indexs = names.indexOf(name)
             userObj.likeNameList.splice(indexs,1)
+            sessionStorage.removeItem('likeNameList')
+            sessionStorage.setItem('likeNameList',JSON.stringify(userObj.likeNameList))
             let index = list.indexOf(obj)
             userObj.likeList.splice(index,1)
+            sessionStorage.removeItem('likeList')
+            sessionStorage.setItem('likeList',JSON.stringify(userObj.likeList))
         }else{
             userObj.likeNameList.push(name)
             userObj.likeList.push(obj)
+            sessionStorage.setItem('likeNameList',JSON.stringify(userObj.likeNameList))
+            sessionStorage.setItem('likeList',JSON.stringify(userObj.likeList))
         }
         return userObj;
     }

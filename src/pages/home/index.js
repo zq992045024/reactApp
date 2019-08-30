@@ -59,7 +59,7 @@ class Home extends Component {
                                     <ul>
                                         {
                                             hotList.map((item, index) => (
-                                                <li key={index}>
+                                                <li key={index} onClick={this.gotoDetial.bind(this,item.recommendContent)}>
                                                     <div className="hotImg">
                                                         <img src={item.recommendContent.poster} alt="" />
                                                     </div>
@@ -85,7 +85,7 @@ class Home extends Component {
                                 <ul>
                                     {
                                         hotList.map((item, index) => (
-                                            <li key={index} className="hoplist">
+                                            <li key={index} className="hoplist" onClick={this.gotoDetial.bind(this,item.recommendContent)}>
                                                 <img src={item.recommendContent.poster} alt="" />
                                                 <div className="hopInfo">
                                                     <div className="hopInfoTitle">
@@ -178,6 +178,12 @@ class Home extends Component {
             })
             sessionStorage.setItem("hotList", JSON.stringify(data))
         }
+    }
+    gotoDetial(info){
+        if(!info.rank){
+            info.rank='暂无评分'
+        }
+        this.props.history.push({pathname:"/detial"+'/'+info.events[0].id+'/'+info.name+'/'+info.timeRange+'/'+info.venueName+'/'+info.rank+'/'+info.lowPrice+"/"+info.poster.substr(31)})
     }
 }
 

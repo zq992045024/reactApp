@@ -9,6 +9,7 @@ export const Header = styled.div`
         display:inline-block;
         padding-left:.2rem;
         width:10%;
+        font-size:.3rem
     }
     h2{
         display:inline-block;

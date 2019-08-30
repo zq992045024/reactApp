@@ -19,12 +19,15 @@ export const Searche = styled.div`
             height:100%;
             input{
                 width:98%;
+                height:.5rem;
                 padding:.18rem;
                 margin:.1rem;
+                margin-top:.2rem;
                 border-radius:.1rem;
                 border:none;
                 background:#F2F2F2;
                 outline-color:#fff;
+                font-size:.2rem;
             }
         }
         .cancel{

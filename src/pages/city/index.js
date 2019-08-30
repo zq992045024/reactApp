@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React, { Component } from 'react'
-
-export default class Mine extends Component {
-    render() {
-        return (
-            <div>
-                city
-                
-            </div>
-        )
-    }
-=======
 import React, { Component, Fragment } from 'react'
 import { CityList } from "./styled"
 import { hot_city, sorted_city } from "@api/play"
@@ -107,5 +94,4 @@ export default class City extends Component {
             sortlist: arr
         })
     }
->>>>>>> zhangqi
 }
